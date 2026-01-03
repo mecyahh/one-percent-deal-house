@@ -13,6 +13,7 @@ export default function NewDealPage() {
     product: "",
     beneficiary: "",
     draftDate: "",
+    source: "",
     notes: "",
   });
 
@@ -48,18 +49,19 @@ export default function NewDealPage() {
           className="input"
         />
 
+        {/* DOB */}
         <input
-          type="date"
+          type="text"
           name="clientDob"
+          placeholder="DOB"
+          onFocus={(e) => (e.target.type = "date")}
+          onBlur={(e) => !e.target.value && (e.target.type = "text")}
           onChange={handleChange}
           className="input"
         />
 
-        <select
-          name="company"
-          onChange={handleChange}
-          className="input"
-        >
+        {/* Company */}
+        <select name="company" onChange={handleChange} className="input">
           <option value="">Select Company</option>
           <option>Americo</option>
           <option>Aetna</option>
@@ -100,12 +102,30 @@ export default function NewDealPage() {
           className="input"
         />
 
+        {/* Draft Date */}
         <input
-          type="date"
+          type="text"
           name="draftDate"
+          placeholder="Draft Date"
+          onFocus={(e) => (e.target.type = "date")}
+          onBlur={(e) => !e.target.value && (e.target.type = "text")}
           onChange={handleChange}
           className="input"
         />
+
+        {/* Source */}
+        <select
+          name="source"
+          onChange={handleChange}
+          className="input"
+        >
+          <option value="">Source</option>
+          <option value="Inbound">Inbound</option>
+          <option value="Readymode">Readymode</option>
+          <option value="AI Transfer">AI Transfer</option>
+          <option value="Warm Market">Warm Market</option>
+          <option value="Book">Book</option>
+        </select>
 
         <textarea
           name="notes"
@@ -122,7 +142,6 @@ export default function NewDealPage() {
         </button>
       </form>
 
-      {/* Input styling */}
       <style jsx>{`
         .input {
           width: 100%;
