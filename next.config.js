@@ -1,4 +1,4 @@
-// next.config.js
+// next.config.js  — REPLACE ENTIRE FILE
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
