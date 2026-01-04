@@ -8,13 +8,14 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "next": "14.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "@supabase/supabase-js": "^2.39.3",
-    "lucide-react": "^0.294.0"
-  },
+  // package.json (dependencies section)
+"dependencies": {
+  "@supabase/supabase-js": "^2.39.3",
+  "next": "14.1.0",
+  "react": "18.2.0",
+  "react-dom": "18.2.0",
+  "lucide-react": "^0.294.0"
+}
   "devDependencies": {
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
